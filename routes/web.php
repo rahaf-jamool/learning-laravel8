@@ -43,3 +43,9 @@ Route::post('/posts/update',[PostController::class,'updatePostData'])->name('pos
 Route::get('post/view/{id}',[PostController::class,'getPostById'])->name('post.view');
 //delete
 Route::get('deletepost/{id}',[PostController::class,'deletePost'])->name('post.deletepost');
+//join user id
+Route::get('posts/join/userid',[PostController::class,'innerJoin'])->name('join.userId');
+Route::get('posts/rightjoin/userid',[PostController::class,'rightJoinCaluse'])->name('rightjoin.userId');
+Route::get('posts/leftjoin/userid',[PostController::class,'leftJoinCaluse'])->name('leftjoin.userId');
+//Models
+Route::get('posts/get',[PostController::class,'getAllPostsModel'])->name('PostsModel.getAll');
